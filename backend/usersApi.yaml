@@ -1,0 +1,23 @@
+swagger: "2.0"
+
+info:
+  version: "1.0"
+  title: "Users"
+  description: "Users api spec from template"
+
+host: "syscloud-355221.appspot.com"
+basePath: "/api/v1"
+
+schemes:
+  - https
+
+paths:
+  /fake-users/{username}:
+    parameters:
+      - name: username
+        in: path
+        required: true
+        description: username of a specific user
+        type: string
+  
+  

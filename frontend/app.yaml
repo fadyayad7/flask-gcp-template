@@ -1,7 +1,6 @@
 runtime: python37
-service: default
+service: frontend
 
-entrypoint: gunicorn api:app
 
 handlers:
   - url: /.*
