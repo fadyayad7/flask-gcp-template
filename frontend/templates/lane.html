@@ -13,9 +13,32 @@
 <body>
     <div class="container pt-5">
         <div class="d-flex justify-content-between">
-            <h1>Home Page 🏡</h1>
+            <h1>Lane Details 📈</h1>
             <a class="btn btn-success d-flex align-items-center shadow" href="/pool">Go To Pool</a>
         </div>
+    </div>
+
+    <div class="container mt-5">
+        <h4>Prenotazioni piscina per l'attuale fascia oraria {{now_time}} della corsia {{lane}}</h4>
+       
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reserv in reservations %}
+                    <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{reserv["user_uuid"]}}</td>
+                        <td>{{reserv["time"]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

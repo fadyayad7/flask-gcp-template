@@ -1,8 +1,7 @@
 from google.cloud import pubsub_v1
 
-project_id = "syscloud-355221"
-subscription_name = "new-user-subsc"
-
+project_id = "esame-sac-lumetti"
+subscription_name = "pool_sub"
 
 subscriber = pubsub_v1.SubscriberClient()
 subscription_path = subscriber.subscription_path(project_id, subscription_name)
