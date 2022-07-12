@@ -2,3 +2,12 @@ html, body {
     height: 100%;
     background-color: #f2f2f2;
 }
+
+a, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.form-control {
+    width: 200px;
+}
